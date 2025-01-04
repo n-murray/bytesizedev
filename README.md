@@ -1,7 +1,8 @@
-### Byte Size Dev content repository
+# Byte Size Dev content repository
 
 ## Overview
 This repo is used to store the ByteSizeDev content for articles and any projects.
+
 ---
 
 ## Structure
@@ -14,4 +15,5 @@ Project Name
         |_ Code
         |_ Additional Notes
         |_ Images
+
 ---
