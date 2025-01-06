@@ -2,6 +2,7 @@
 
 ## Overview
 This repo is used to store the ByteSizeDev content for articles and any projects.
+It is set up to be used via Obsidian as an editor and general management tool.
 
 ---
 
