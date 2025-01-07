@@ -22,6 +22,20 @@
             }
           },
           {
+            "id": "15838c429168ef7f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Schedule.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Schedule"
+            }
+          },
+          {
             "id": "556f014ed25e4b56",
             "type": "leaf",
             "state": {
@@ -202,11 +216,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "556f014ed25e4b56",
+  "active": "15838c429168ef7f",
   "lastOpenFiles": [
+    "README.md",
+    "Schedule.md",
     "Kubernetes/Understanding Kubernetes/Article.md",
-    "Pasted image 20250106102112.png",
     "Kubernetes/Services/Article.md",
+    "Pasted image 20250106102112.png",
     "Pasted image 20250106093713.png",
     "Kubernetes/Workloads/Article.md",
     "Article Keypoints.md",
@@ -217,7 +233,6 @@
     "Kubernetes/Network Policies",
     "Kubernetes/Workloads",
     "Kubernetes/Understanding Kubernetes",
-    "README.md",
     "Kubernetes/Kubernetes Cluster Creation/Script.md",
     "Kubernetes/Kubernetes Cluster Creation/Overview.md",
     "Kubernetes/Kubernetes Cluster Creation/Article.md"
