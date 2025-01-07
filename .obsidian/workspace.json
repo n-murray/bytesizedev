@@ -25,14 +25,14 @@
             "id": "15838c429168ef7f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "Schedule.md",
-                "mode": "source",
-                "source": false
+                "aFile": "Kubernetes/Understanding Kubernetes/Notes.md",
+                "bFile": "Kubernetes/Understanding Kubernetes/Notes.md",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "Schedule"
+              "icon": "diff",
+              "title": "Diff: Notes"
             }
           },
           {
@@ -218,9 +218,10 @@
   },
   "active": "15838c429168ef7f",
   "lastOpenFiles": [
-    "README.md",
-    "Schedule.md",
+    "Kubernetes/Understanding Kubernetes/Notes.md",
     "Kubernetes/Understanding Kubernetes/Article.md",
+    "Schedule.md",
+    "README.md",
     "Kubernetes/Services/Article.md",
     "Pasted image 20250106102112.png",
     "Pasted image 20250106093713.png",
