@@ -4,7 +4,7 @@ import Image from "next/image";
 export function Home() {
   return (
     <section className="flex-col md:flex-row flex items-center mt-16 mb-16 md:mb-12">
-      <Image
+      <img
         src="/assets/favicon.png"
         alt="ByteSizeDev Logo"
         width={150}
