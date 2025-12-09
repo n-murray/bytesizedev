@@ -47,7 +47,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: ${{ steps.detect-package-manager.outputs.manager }}
+          cache: ${{ steps.detect-package-manager.outputs.manager }}/bytesizeweb/
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
@@ -62,12 +62,12 @@ jobs:
           path: |
             .next/cache
           # Generate a new cache whenever packages or source files change.
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('./bytesizeweb/package-lock.json', './bytesizeweb/yarn.lock') }}-${{ hashFiles('./bytesizeweb/**.[jt]s', './bytesizeweb/**.[jt]sx') }}
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('./bytesizeweb/package-lock.json') }}-${{ hashFiles('./bytesizeweb/**.[jt]s', './bytesizeweb/**.[jt]sx') }}
           # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('./bytesizeweb/package-lock.json', './bytesizeweb/yarn.lock') }}-
+            ${{ runner.os }}-nextjs-${{ hashFiles('./bytesizeweb/package-lock.json') }}-
       - name: Install dependencies
-        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }} ./bytesizeweb/
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build ./bytesizeweb/
       - name: Upload artifact
