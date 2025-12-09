@@ -1,13 +1,13 @@
 ---
 title: "A Beginners Guide to Understanding CI/CD"
 excerpt: "A high-level overview of Continuous Integration and Delivery, and what it means in plain language understandable by beginners."
-coverImage: "https://miro.medium.com/v2/1*f3O_wmT8rPcEJQtrcIDxUQ.png"
+coverImage: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*f3O_wmT8rPcEJQtrcIDxUQ.png"
 date: "2022-02-22"
 author:
   name: Nicholas Murray
   picture: "/assets/profile.jpeg"
 ogImage:
-  url: "https://miro.medium.com/v2/1*f3O_wmT8rPcEJQtrcIDxUQ.png"
+  url: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*f3O_wmT8rPcEJQtrcIDxUQ.png"
 ---
 ## Introduction
 
