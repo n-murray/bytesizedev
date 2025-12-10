@@ -6,10 +6,13 @@ import Container from "@/app/_components/container";
 import Header from "@/app/_components/header";
 import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
+import { MorePosts } from "@/app/_components/more-posts";
 
 export default async function Post(props: Params) {
   const params = await props.params;
   const post = getPostBySlug(params.slug);
+  const allPosts = getAllPosts().slice(0, 4);
+  const otherPosts = allPosts.filter((p) => p.slug !== params.slug);
 
   if (!post) {
     return notFound();
@@ -30,6 +33,7 @@ export default async function Post(props: Params) {
           />
           <PostBody content={content} />
         </article>
+        {otherPosts.length > 0 && <MorePosts posts={otherPosts} />}
       </Container>
     </main>
   );
