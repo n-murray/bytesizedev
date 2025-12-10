@@ -9,10 +9,9 @@ author:
 ogImage:
   url: "https://miro.medium.com/v2/resize:fit:700/1*wIhnopl1TLJKGKhIzjpbnw.png"
 ---
-# Introduction
+## Introduction
 
 In the modern world of software development, Kubernetes is everywhere. You can see its impacts at all levels of the development pipeline from locally on your laptop to deploying a finished system. It has very rapidly been adopted across the software development industry as a whole, leading to lots of new terminologies and many new variations of “as a service” applications, but what is it and why is it being so heavily adopted over the more traditional
----
 
 ## So what is a cluster?
 
@@ -20,7 +19,7 @@ According to the Oxford dictionary, a cluster is “_a group of things of the sa
 
 ![My interpretation of a Kubernetes clusters architecture outlining the nodes and their components.](https://miro.medium.com/v2/resize:fit:700/1*w1yMP78-zXYDfmtUAcO4nw.png)
 
-My interpretation of a Kubernetes cluster’s structure.
+##### My interpretation of a Kubernetes cluster’s structure.
 
 A node can be either a physical or virtual machine and can also be local or remote. The cluster can have up to 5000 nodes or as little as 1 for resource constrained environments or for learning. To be a working part of the cluster each node must run the following components.
 
@@ -41,7 +40,6 @@ Master nodes are responsible for running the control plane which as the name sug
 
 Master nodes can also act as worker nodes and can be used to run workloads. Since technically only one master node is required per cluster additional master nodes are mainly added to achieve high availability of the API server and by extension the control plane.
 
----
 
 ## Ok great, so what can we even do with a cluster?
 
@@ -53,7 +51,7 @@ In the world of Kubernetes, a Pod (as in a Pod of whales ) is the smallest unit 
 
 ![A diagram showing three POD replicas running across three worker nodes within a kubernetes cluster.](https://miro.medium.com/v2/resize:fit:700/1*tav93VOW7K43b4GlVIENew.png)
 
-Pods replicas running across multiple worker nodes in a cluster
+##### Pods replicas running across multiple worker nodes in a cluster
 
 In the above diagram, you can see how three replicas of the same Pod can be run across multiple worker nodes within your cluster. Each of the Pods in the example has three containers, a backend, a frontend and a logging application. In the context of these three Pods the backend and frontend containers could be considered the main applications and the logging container would be a utility that runs alongside the application. This type of utility container is called a sidecar and can also share all the same resources as the other containers.
 
@@ -69,8 +67,6 @@ There are a number of ways to create a Pod, it can be created by itself as a Pod
 4. [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/)
 5. [Job](https://kubernetes.io/docs/concepts/workloads/controllers/job/)
 
----
-
 # Wrapping up
 
 I hope this article has helped some of you as a stepping stone onto the road into the world cloud native computing. If you liked the guide and would like to see a more in-depth or broader guide please leave a comment and let me know!
@@ -79,7 +75,6 @@ If you find anything that is incorrect or misleading in the article go ahead and
 
 If you enjoyed the article consider [subscribing](https://n-murray.medium.com/subscribe) for updates on my future articles, also if you are not already a member on Medium you can join using [my membership link](https://n-murray.medium.com/membership).
 
----
 ## References
 
 [1] ^ Wikipedia Foundation Inc, “Kubernetes” [[https://en.wikipedia.org/wiki/Kubernetes](https://en.wikipedia.org/wiki/Kubernetes)]

@@ -51,7 +51,7 @@ spec:
 ```
 
 
-A Default Ingress policy that will block all incoming traffic.
+##### A Default Ingress policy that will block all incoming traffic.
 
 In this next example, we are restricting all ingress traffic to our backend application, selected on line eight using the label “app=backend”. We are doing this by only allowing Pods with the label “app=frontend” to communicate with port 5555 and only using TCP. This can be restricted even further by applying more label selectors.
 
@@ -76,7 +76,7 @@ spec:
             port: 5555
 ```
 
-A Network Policy that blocks traffic using a label selector and port designation
+##### A Network Policy that blocks traffic using a label selector and port designation
 
 In the above example, we are allowing traffic from Pods with the label “app=frontend”, by default this only allows traffic from Pods within our own namespace. To allow traffic from Pods in another namespace we can do the following.
 
@@ -103,7 +103,7 @@ spec:
           - protocol: TCP
             port: 5555
 ```
-A Network Policy with a namespace selector.
+##### A Network Policy with a namespace selector.
 
 This will only allow traffic from Pods with the label “app=frontend” **and** from any namespace with the label “project=myApp”.
 

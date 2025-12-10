@@ -20,7 +20,7 @@ Luckily, Kubernetes offers a very flexible solution for those problems, in the f
 
 ConfigMaps are Kubernetes objects that can inject non-sensitive data such as host names, as environmental variables into your Pods, specifically your containers. They can also be used to mount a read-only file into the container, as long as it does not exceed 1Mib.
 
-> Although the intended purpose is for mounting configuration and properties files, they are **not** restricted to just those types and can also be used to mount many different types of files such as **scripts**. This can be very useful to get a script into a container for troubleshooting or to prevent you needing to bake it into an image.
+> _Although the intended purpose is for mounting configuration and properties files, they are **not** restricted to just those types and can also be used to mount many different types of files such as **scripts**. This can be very useful to get a script into a container for troubleshooting or to prevent you needing to bake it into an image._
 
 In the below code snippet below I am defining a ConfigMap for my hypothetical application called “my-app”. In it we are defining a couple of properties in the key-value form and also we are defining a properties file that can be mounted in your container as a volume.
 
@@ -39,7 +39,7 @@ data:
     deployment.type=Production
 ```
 
-A ConfigMap specification that shows how to define both individual values and a file.
+##### A ConfigMap specification that shows how to define both individual values and a file.
 
 Simply defining the ConfigMap does not make it instantly available in your Pods, they have to be added to the Pods specification. In the example below I have shown how we can use the key-value properties and the files.
 
@@ -73,7 +73,7 @@ spec:
       name: my-app-config # The name of our ConfigMap above
 ```
 
-A Pod specification that shows how to mount and use a ConfigMap in your Pods.
+##### A Pod specification that shows how to mount and use a ConfigMap in your Pods.
 
 An important and useful point to note on the key-value properties defined in a ConfigMap is that when it is mounted to your container, it will also appear as a file with the value inside it and the key for a name. This can be prevented if it is not wanted by defining a list of items in the [volume spec of your Pod](https://gist.github.com/n-murray/188a194d205b7edef8c4340295002998).
 
@@ -99,7 +99,7 @@ data:
     YXkgZm9yIG1vcmUgYmVnaW5uZXJzIGd1aWRlcyBsaWtlIHRoaXMgb25lCg==
 ```
 
-A Secret specification that shows how to define both, individual keys and a file.
+##### A Secret specification that shows how to define both, individual keys and a file.
 
 Just like a ConfigMap, to use them in our Pods we need to mount them to our Pods as either a volume or as environmental variables. In the next code snippet, I have done just that and defined an example Pod specification that uses our Secret defined above.
 
@@ -133,23 +133,23 @@ spec:
       name: my-app-secret # The name of our Secret above
 ```
 
-A Pod specification that shows how to mount and use a Secrets in your Pods.
+##### A Pod specification that shows how to mount and use a Secrets in your Pods.
 
 There are a few different types of Secrets, they are used to distinguish the different use cases of the data within them. Based on these different types Kubernetes will carry out different validation and add different constraints to them.
 
-**Opaque**: This is the default type of Secret, and what is defined in the example above.
+- **Opaque**: This is the default type of Secret, and what is defined in the example above.
 
-**Docker config:** These Secrets are used to define credentials used for accessing container image registries.
+- **Docker config:** These Secrets are used to define credentials used for accessing container image registries.
 
-**Basis authentication:** Basic auth tokens are used to store credentials. The secret must contain username or password as its keys. In my example Secret above I could have used a basic authentication secret to define my username and password keys. This type of secret is mainly for convenience to identify the purpose of the Secret.
+- **Basis authentication:** Basic auth tokens are used to store credentials. The secret must contain username or password as its keys. In my example Secret above I could have used a basic authentication secret to define my username and password keys. This type of secret is mainly for convenience to identify the purpose of the Secret.
 
-**Service account token:** These Secrets are used to store a token used to identify a service account. These are no longer used as of Kubernetes 1.22.
+- **Service account token:** These Secrets are used to store a token used to identify a service account. These are no longer used as of Kubernetes 1.22.
 
-**SSH:** This type of Secret is used for storing ssh keys and again is only for identifying the purpose of the Secret.
+- **SSH:** This type of Secret is used for storing ssh keys and again is only for identifying the purpose of the Secret.
 
-**TLS:** Another convenience type that can be used for storing TLS files such as “**.crt”** and “**.key**” file types.
+- **TLS:** Another convenience type that can be used for storing TLS files such as “**.crt”** and “**.key**” file types.
 
-**Bootstrap token**: Bootstrap token Secrets are usually created in the kube-system namespace, they are supposed to be used as a bearer token when creating your cluster or adding new nodes.
+- **Bootstrap token**: Bootstrap token Secrets are usually created in the kube-system namespace, they are supposed to be used as a bearer token when creating your cluster or adding new nodes.
 
 ## Wrapping up
 

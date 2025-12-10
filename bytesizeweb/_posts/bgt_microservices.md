@@ -12,11 +12,9 @@ ogImage:
 # Introduction
 
 With the massive growth and adaptation of cloud services and infrastructure there is a new wave of cloud native applications being developed which need to be highly scalable, easy to maintain and efficient in terms of development and cost. Some examples of these applications can be seen today in the form of Netflix and Amazon which migrated from a traditional monolithic architecture to a microservices based one [1] [2].
-##      “By 2022, 90% of All New Apps Will Feature Microservice Architectures” [3]
+> _“By 2022, 90% of All New Apps Will Feature Microservice Architectures” [3]_
 
 While Amazon and Netflix are different in terms of the services they provide, they both faced the same issue; how to maintain the scalability and maintainability of a massive online service while also providing the same or better levels of quality to their customers. In both situations the adaptation of a microservice architecture and migrating to a cloud infrastructure was key to their success, apart from Amazon who instead took the opportunity to create their own cloud infrastructure to migrate to, seen today in the form of Amazon Web Services (AWS).
-
----
 
 ## So what is a Microservice?
 
@@ -33,8 +31,6 @@ Microservices when fully leveraged can offer many benefits to developers such as
 
 > TLDR/TLDU: I like to think of microservices in terms of a business, it can be broken down into seperate departments like R&D, Marketing and HR. Each of these departments all work together as part of the same business but they all provide different services. While each of these departments all do different jobs they still rely on each other to work and need to be able to communicate with each other effectively just like a microservice.
 
----
-
 ## How does it work in practice?
 
 Ok so now you know a little bit about what a microservice is but how does this all work in practice? In practice each microservice can be deployed as a container or POD in a Kubernetes cluster. If you want to know more about containers have a read of my other [ article](https://medium.com/geekculture/a-beginners-guide-to-understanding-docker-99f704436850)  here which covers the basics of containers and Docker.
@@ -45,8 +41,6 @@ Kubernetes allows us to easily create multiple instances of a service by scaling
 
 I hope that this article helps some of you to understand a little more about microservices and the benefits they can bring with them. If you find anything that is incorrect or misleading in the article go ahead and let me know what it is so I can learn from it! I am writing this as an educational experience for myself as well as others so I welcome constructive feedback.
 If you enjoyed the article consider subscribing for updates on my future articles, also if you are not already a member on Medium you can join using my [membership link](https://n-murray.medium.com/membership)
-
----
 
 ## References
 

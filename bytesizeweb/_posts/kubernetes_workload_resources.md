@@ -41,7 +41,7 @@ Since ReplicaSets select their Pods using labels they will also take control of 
 
 ![](https://miro.medium.com/v2/resize:fit:681/1*JuQzyia8B-hzPsj5pGan5A.png)
 
-ReplicaSet assumes control of two existing Pods and creates one of its own.
+##### ReplicaSet assumes control of two existing Pods and creates one of its own.
 
 In the above diagram, I have outlined the previous example of a ReplicaSet selecting Pods with the label “**type: frontend**”. In the diagram, the ReplicaSet has been instructed to create three replicas and since it has taken control of two existing Pods it only needs to create one additional new Pod using the Pod template outlined as part of the ReplicaSets specification. This results in three different types of Pods/Applications being controlled by the ReplicaSet.
 
@@ -51,7 +51,7 @@ A [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deploy
 
 ![](https://miro.medium.com/v2/resize:fit:681/1*lnttul_NgvgVyhmhBID1tA.png)
 
-A Deployment with a ReplicaSet and three Pod replicas
+##### A Deployment with a ReplicaSet and three Pod replicas
 
 At this point, you might be asking isn't a Deployment just the same as a ReplicaSet? Why do we need a ReplicaSet at all? Well, a Deployment is essentially a wrapper for the ReplicaSet that provides some useful functionality such as Rolling Updates of the ReplicaSet itself.
 
@@ -67,7 +67,7 @@ Another unique feature of a StatefulSet is that it will deploy its replicas usin
 
 ![](https://miro.medium.com/v2/resize:fit:681/1*AIEbYVHg8t7nHlF-pqOLsw.png)
 
-A StatefulSet with three replicas each with unique ordered names
+##### A StatefulSet with three replicas each with unique ordered names
 
 Each replica in a StatefulSet will also have a unique network identifier in the way of a hostname that is made up of the StatefulSets name and its relative replica number, this is similar to the naming scheme of the replicas e.g for replica zero of a StatefulSet called “**my-app**” our Pods hostname would be “**my-app-0**”.
 
@@ -79,9 +79,9 @@ A [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemons
 
 DaemonSets can also be configured to use a label selector to select which nodes to run on instead of just running on all nodes in the cluster. This may be helpful when you only want to run a replica of your Pod on a subset of your nodes. Taking us back to our log collector example, if we only wanted to collect logs for a log-producing application that only runs on specific nodes we could specify a label selector to choose only the specific nodes our application is running on instead of all nodes. This could help us save some resources by not creating replicas of our Pod on nodes that they are not needed on.
 
-![](https://miro.medium.com/v2/resize:fit:700/1*mzRdZ4T47LRsQUl4HzDIkA.png)
+![A DaemonSet creates a replica on each worker node by default](https://miro.medium.com/v2/resize:fit:700/1*mzRdZ4T47LRsQUl4HzDIkA.png)
 
-A DaemonSet creates a replica on each worker node by default
+##### A DaemonSet creates a replica on each worker node by default
 
 The DaemonSet can be looked down upon by a lot of people for its subjectively resource-intensive approach to Pod replication but used correctly and for the appropriate use case, it can prove very useful.
 

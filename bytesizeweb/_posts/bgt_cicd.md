@@ -15,8 +15,6 @@ In the modern world of Cloud Native software development, many systems and appli
 
 The answer is of course many things, such as the work culture and the developers themselves who are actually writing the code. But, one of the key enablers is the continuous integration and continuous delivery systems that the companies have created to look after their codebases.
 
----
-
 ## Continuous Integration
 
 Continuous Integration, the CI in CI/CD; is the process by which the building, testing and merging of new code to a repository is automated. This automation allows developers to frequently push new code without having to worry about potential application breaking code being introduced as it will be caught by the automated tests. The process of building and testing the code is made easy with project management systems such as [Maven](https://maven.apache.org/) or [Gradle](https://gradle.org/) , which can automate building and testing.
@@ -35,7 +33,7 @@ Although it can seem like CI and CD are two separate things they are usually par
 
 ![Simple CICD pipeline](https://miro.medium.com/v2/resize:fit:720/format:webp/1*Y9tRhgBDRzJA2zpCleJRHA.png)
 
-Simple CICD pipeline
+##### Simple CICD pipeline
 
 In the image above I have outlined a relatively simple CI/CD Pipeline. It all starts off when you push some new code to your Git repository, once the new code is detected by your CI framework it will kick off the pipeline. Your new code will be pulled into a build environment and built, if it is successful your tests will then be run against your new build. If your build or tests do not pass the pipeline will then stop, at this point, an automated email or notification of some sort is usually sent to the repository owner or whoever pushed the new code to update them on the status of the build. If your build is successful, and all your tests pass then your new code is merged to the main branch of your repository and any packages can be delivered.
 
@@ -43,7 +41,7 @@ The example given is of course very straight forward but CI/CD pipelines can get
 
 ![A more complex pipeline](https://miro.medium.com/v2/resize:fit:720/format:webp/1*9yXzTr9ynE72lfDkKGVL4g.png)
 
-A more complex pipeline
+##### A more complex pipeline
 
 This repository has two projects in it, one for a frontend and one for a backend. So we have two separate languages, let's say JavaScript and Java. For this, we need separate build jobs and separate test runners. As you can see from the flowchart this is already getting more complex, now take into account that a single pipeline can encompass multiple repositories!
 
