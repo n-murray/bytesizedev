@@ -6,6 +6,9 @@ This example showcases Next.js's [Static Generation](https://nextjs.org/docs/app
 
 The blog posts are stored in `/_posts` as Markdown files with front matter support. Adding a new Markdown file in there will create a new blog post.
 
+A new **Apps** section leverages a parallel `/_apps` folder – markdown there describes individual applications.  Front‑matter fields include `title`, `description`, `coverImage`, `releaseDate`, **`platforms`** (array such as `["web","ios","android"]`), etc.  A privacy policy can be included in the same file under a `Privacy Policy` heading; it will automatically be exposed on a sub‑route (`/apps/[slug]/privacy`) while the main app page shows only the marketing description.
+
+
 To create the blog posts we use [`remark`](https://github.com/remarkjs/remark) and [`remark-html`](https://github.com/remarkjs/remark-html) to convert the Markdown files into an HTML string, and then send it down as a prop to the page. The metadata of every post is handled by [`gray-matter`](https://github.com/jonschlinkert/gray-matter) and also sent in props to the page.
 
 ## Demo

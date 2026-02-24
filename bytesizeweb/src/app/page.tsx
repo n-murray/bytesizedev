@@ -14,7 +14,23 @@ export default function Index() {
   return (
     <main>
       <Container>
-        <Home/>
+        <Home />
+
+        {/* prominent apps callout */}
+        <section className="mt-12 mb-12 bg-indigo-900 text-white p-8 rounded-lg">
+          <h2 className="text-4xl font-bold mb-4">Explore My Apps</h2>
+          <p className="text-lg mb-6">
+            A curated collection of apps I&rsquo;ve built –
+            take a look, download, or just browse.. thats cool too.
+          </p>
+          <a
+            href="/apps"
+            className="inline-block bg-white text-indigo-900 font-semibold px-6 py-3 rounded shadow hover:bg-gray-100"
+          >
+            Browse apps →
+          </a>
+        </section>
+
         <HeroPost
           title={heroPost.title}
           coverImage={heroPost.coverImage}
