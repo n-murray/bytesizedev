@@ -6,6 +6,7 @@ import Container from "@/app/_components/container";
 import Header from "@/app/_components/header";
 import { AppHeader } from "@/app/_components/app-header";
 import { MoreApps } from "@/app/_components/more-apps";
+import markdownStyles from "../../markdown-styles.module.css";
 
 export default async function AppPage(props: Params) {
   const params = await props.params;
@@ -23,7 +24,7 @@ export default async function AppPage(props: Params) {
     <main>
       <Container>
         <Header />
-        <article className="mb-32">
+        <article className="mb-32 max-w-2xl mx-auto">
           <AppHeader
             title={app.title}
             coverImage={app.coverImage || ""}
@@ -31,7 +32,7 @@ export default async function AppPage(props: Params) {
             platforms={app.platforms}
           />
           <div
-            className="prose dark:prose-dark max-w-none"
+            className={markdownStyles["markdown"]}
             dangerouslySetInnerHTML={{ __html: content }}
           />
           {app.privacyContent && (

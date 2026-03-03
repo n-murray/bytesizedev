@@ -4,6 +4,7 @@ import { getAppBySlug, getAllApps } from "@/lib/api";
 import markdownToHtml from "@/lib/markdownToHtml";
 import Container from "@/app/_components/container";
 import Header from "@/app/_components/header";
+import markdownStyles from "../../../markdown-styles.module.css";
 
 export default async function PrivacyPage(props: Params) {
   const params = await props.params;
@@ -24,7 +25,7 @@ export default async function PrivacyPage(props: Params) {
     <main>
       <Container>
         <Header />
-        <article className="mb-32">
+        <article className="mb-32 max-w-2xl mx-auto">
           <h1 className="text-4xl font-bold mb-6">
           {app.title} Privacy Policy
         </h1>
@@ -34,7 +35,7 @@ export default async function PrivacyPage(props: Params) {
           </a>
         </div>
         <div
-          className="prose dark:prose-dark max-w-none"
+          className={markdownStyles["markdown"]}
           dangerouslySetInnerHTML={{ __html: content }}
         />
         </article>
