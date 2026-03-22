@@ -10,10 +10,28 @@ platforms:
 
 ## Overview
 
-BudgApp is a monthly budget planner that allows you to quickly add new monthly, weekly or one-off budget items to your budget. 
-Set a specific day for each budget item allowing you to keep track of when budget items are due. 
+BudgApp is a monthly budget planner that helps you track your income and expenses without any data leaving your device. All data is stored locally, so your financial information stays completely private.
 
-Create an Extra Budget for when you need to plan for an upcoming holiday or party, without changing anything in your regular monthly budgets.
+### Monthly Budgets
+
+Navigate between months to view your budget for any time of year. Each month displays a summary of all income and expense items, with a colour-coded total — green when you're in the black, red when you're not.
+
+Add income or expense items with one of three intervals:
+
+- **Monthly** — occurs every month on a specific date (e.g. rent on the 1st)
+- **Weekly** — occurs every week on a specific day (e.g. groceries every Friday), with the total automatically calculated based on how many times that weekday falls in the selected month
+- **Once** — a one-off item tied to a specific month (e.g. a birthday gift in March)
+
+Items can be edited or deleted at any time.
+
+### Extra Budgets
+
+Create named Extra Budgets for one-off events like a holiday or party. Each Extra Budget has its own income and expense items, completely separate from your regular monthly budget, so your normal budget stays untouched.
+
+### Other Features
+
+- Dark mode support
+- Drawer navigation to switch quickly between Monthly, Income, Expense, and Extra Budget screens
 
 ### Privacy Policy
 
