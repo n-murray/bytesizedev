@@ -1,8 +1,8 @@
 ---
 title: "BudgApp - Budget Planner"
 releaseDate: "2026-01-01"
-coverImage: "/assets/blog/preview/hello-world/cover.png"
-description: "A simple monthly budget planner to keep track of your money."
+coverImage: "/assets/apps/budgapp/FeatureGraphic.png"
+description: "BudgApp is a monthly budget planner that helps you track your income and expenses without any data leaving your device."
 platforms:
   - iOS
   - Android
@@ -32,6 +32,52 @@ Create named Extra Budgets for one-off events like a holiday or party. Each Extr
 
 - Dark mode support
 - Drawer navigation to switch quickly between Monthly, Income, Expense, and Extra Budget screens
+
+## Screenshots
+
+### Main Budget View
+
+![Budget screen in light mode showing monthly income, expenses, and total balance](/assets/apps/budgapp/budget-screen-light-portrait.png)
+
+The monthly budget dashboard displays your income and expense totals with a colour-coded balance indicator — green when you're in the black, red when spending exceeds income.
+
+![Budget screen in dark mode showing monthly income, expenses, and total balance](/assets/apps/budgapp/budget-screen-dark-portrait.png)
+
+BudgApp supports both light and dark themes for comfortable viewing at any time of day.
+
+### Navigation & Menu
+
+![Drawer menu showing all available navigation options](/assets/apps/budgapp/menu-drawer-portrait.png)
+
+The drawer navigation provides quick access to Monthly, Income, Expense, and Extra Budget screens.
+
+### Managing Budget Items
+
+![Expense items list showing recurring and one-time expenses for the month](/assets/apps/budgapp/expense-items-portrait.png)
+
+The Expense screen displays all monthly expenses, organized by recurring monthly items, weekly recurring items, and one-off purchases.
+
+![Form to add a new recurring budget item with interval options](/assets/apps/budgapp/add-budget-item-portrait.png)
+
+Add new income or expense items with flexible intervals — select Monthly, Weekly, or Once to define how often the item recurs.
+
+### Extra Budgets
+
+![Extra Budget main screen showing all created extra budgets](/assets/apps/budgapp/extra-budget-portrait.png)
+
+Create named Extra Budgets for special projects, holidays, or savings goals. Each Extra Budget is completely separate from your regular monthly budget.
+
+![Form to create a new extra budget with a custom name](/assets/apps/budgapp/create-extra-budget-portrait.png)
+
+Give each Extra Budget a meaningful name to organize your one-off spending.
+
+![Extra Budget view with income and expense items for a specific budget](/assets/apps/budgapp/extra-budget-view-portrait.png)
+
+View the breakdown of income and expenses within any Extra Budget, with automatic total calculations.
+
+![Form to add a new item to an extra budget](/assets/apps/budgapp/add-extra-budget-item-portrait.png)
+
+Add income or expense items directly to your Extra Budget with the same flexible input options.
 
 ### Privacy Policy
 

@@ -28,3 +28,7 @@
 .markdown h5 {
     @apply text-xl text-gray-500 mt-6 mb-4 leading-snug;
 }
+
+.markdown img {
+  @apply max-w-96 w-full;
+}

@@ -22,7 +22,7 @@ export function AppPreview({
       {coverImage && (
         <div className="mb-5">
           <img
-            className="rounded-lg w-full object-cover"
+            className="rounded-lg w-50 object-cover"
             src={coverImage}
             alt={title}
           />
