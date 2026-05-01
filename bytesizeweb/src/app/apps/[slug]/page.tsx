@@ -35,6 +35,22 @@ export default async function AppPage(props: Params) {
             className={markdownStyles["markdown"]}
             dangerouslySetInnerHTML={{ __html: content }}
           />
+          <div className="mt-10 p-6 bg-indigo-50 dark:bg-slate-800 border border-indigo-200 dark:border-slate-600 rounded-lg">
+            <h2 className="text-xl font-semibold mb-2">Need Help?</h2>
+            <p className="mb-3 text-sm">
+              For support or questions about this app, contact us at:
+            </p>
+            <a
+              href="mailto:info@bytesizedev.ie"
+              className="font-bold text-indigo-600 dark:text-indigo-400 hover:underline"
+            >
+              info@bytesizedev.ie
+            </a>
+            <span className="mx-2 text-neutral-400">·</span>
+            <a href="/support" className="text-indigo-600 dark:text-indigo-400 hover:underline">
+              Visit support page →
+            </a>
+          </div>
           {app.privacyContent && (
             <p className="mt-8">
               <a
